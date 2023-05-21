@@ -147,7 +147,6 @@ data_dict = {
 }
 
 
-
 # Create a DataFrame from the dictionary
 df = pd.DataFrame(data_dict)
 
