@@ -1,0 +1,6 @@
+ProductId,ProductName,ProductGroup
+PRD01,Full Health Cover,Family
+PRD02,OPD care package,Personal
+PRD03,Comprehensive Lab Package,Personal
+PRD04,Heart Care,Family
+PRD05,Full Body Care,Personal
