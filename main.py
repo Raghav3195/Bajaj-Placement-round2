@@ -146,6 +146,8 @@ data_dict = {
     'MedicineNames': medicine_names_list
 }
 
+
+
 # Create a DataFrame from the dictionary
 df = pd.DataFrame(data_dict)
 
@@ -174,3 +176,22 @@ for appointment_id, values in aggregated_data.items():
 # Export the aggregated data to a JSON file
 with open('aggregated_data.json', 'w') as file:
     json.dump(aggregated_data, file)
+
+
+
+gender_counts = {}
+for gender in df['gender']:
+    if gender in gender_counts:
+        gender_counts[gender] += 1
+    else:
+        gender_counts[gender] = 1
+
+
+# Create a pie chart
+plt.pie(gender_counts.values(), labels=gender_counts.keys(), autopct='%1.1f%%')
+
+# Add a title
+plt.title('Number of Appointments by Gender')
+
+# Display the chart
+plt.show()
